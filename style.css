@@ -11,3 +11,33 @@ body {
 .logo {
   width: 500px;
 }
+
+/* code from w3schools.com collapsible how to */
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #aaa;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #eee;
+}

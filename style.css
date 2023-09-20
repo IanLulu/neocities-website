@@ -7,3 +7,7 @@ body {
   color: black;
   font-family: Verdana;
 }
+
+.logo {
+  width: 500px;
+}

@@ -6,11 +6,42 @@ body {
   background-color: white;
   color: black;
   font-family: Verdana;
+  min-height: 100vh; /* vh = viewport height so displays it to max of viewport height */
+  /* text-align: center; */
 }
 
 .logo {
-  width: 500px;
+  width: 333px;
+  padding: 9px;
 }
+
+.social {
+  display: block;
+  max-width: 500px;
+  /* color: #f41de9; // can't decide on a color yet... */
+  border: 3px solid #000;
+  border-radius: 25px;
+  text-decoration: none; /* removes line underneath link */
+  margin: 0 auto 10px auto;
+  padding: 10px 10px;
+}
+
+/*
+ * doesn't work. I think it's because I didn't set display to "block". The way it looks as is fine for rn
+.web_buttons {
+  display: flex; /* flex box(?) on every device (no need to worry abt media queries).
+
+  a {
+    flex: 1;
+    padding: 5px 10px;
+    margin-right: 10px;
+
+    &:last-child { /* pseudo-selector(?). So that last element of any length list gets 0px margin (i think)
+      margin-right: 0px;
+    }
+  }
+}
+*/
 
 /* code from w3schools.com collapsible how to */
 

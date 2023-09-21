@@ -2,6 +2,11 @@
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
 
+/* Testing: variables for colors */
+:root { /* root selector */
+  --red: #ff0000 /* variables must start with the two dashes */
+}
+
 body {
   background-color: white;
   color: black;
@@ -18,12 +23,25 @@ body {
 .social {
   display: block;
   max-width: 500px;
+  margin: 0 auto 15px auto;
+  padding: 10px 5px;
   /* color: #f41de9; // can't decide on a color yet... */
   border: 3px solid #000;
   border-radius: 25px;
   text-decoration: none; /* removes line underneath link */
-  margin: 0 auto 10px auto;
-  padding: 10px 10px;
+  transition: all 222ms ease-in-out;
+
+  &.carrd { /* pseudo-selector again or is it? Need to read up on this & thingy. Might be pseudo-element */
+    background-color: #000;
+    color: #fff;
+    border: 3px solid var(--red);
+  }
+
+  /* if you put this at the end instead of before the carrd pseudo-element(?), it applies to all elements of the class */
+  &:hover {
+    background-color: var(--red);
+    color: #fff;
+  }
 }
 
 /*

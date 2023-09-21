@@ -7,7 +7,8 @@
      <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon">
      <link href="/assets/favicon.ico" rel="icon" type="image/x-icon">
      <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-     <!-- <link href="/style.css" rel="stylesheet" type="text/css"> -->
+     <!-- <script src="/script.js" async></script> -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
      <style>
       body {
         text-align: center;
@@ -15,8 +16,17 @@
      </style>
   </head>
   <body>
+    <!-- TESTING: adding this code snippet to prevent caching. Wanted to add a loading animation when entering the site. -->
+    <!-- <div class="testin">
+      <img src="https://picsum.photos/300/300/?random">
+    </div> -->
+
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    
     <!-- Logo -->
-    <a href="/motivation.html"><img class="logo" src="/assets/nai2k-metal-cropped.png" alt="logo" title="?"></a>
+    <a href="/motivation.html" style="cursor: default;"><img class="logo" src="/assets/nai2k-metal-cropped.png" alt="logo" title="?"></a>
     <h1>yoru2圭</h1>
     <p>
       f.k.a. randY Facalding
@@ -42,14 +52,15 @@
     <!-- MAYBE add little enlarging effect when hovering. Apply the same to the logos & images -->
 
     <!-- ROAD TO VERSION 2.0 -->
-    <h2>UNDER CONSTRUCTION<img src="https://neocities.org/cat.png"></h2>
-    <br>
+    <!-- <h2>UNDER CONSTRUCTION<img src="https://neocities.org/cat.png"></h2>
+    <br> -->
 
     <h3>my old website:</h3>
     <a class ="social carrd" href="https://nailxiv.carrd.co/" rel="noopener" target="_blank">my carrd site</a>
     <br>
 
     <a href="/extras.html" title="Xperimental"><h4>EXTRAS</h4></a>
+    <br>
 
     <!-- Website buttons -->
     <div class="web_buttons">
@@ -57,6 +68,11 @@
       <br>
       <a href="https://neocities.org/"><img src="/assets/neocities.png" alt="artistic builder catto" title="hosted by neocities"></a>  
     </div>
-    
+
+    <script>
+      $(window).on("load", function() {
+        $(".loader-wrapper").fadeOut("slow");
+      });
+    </script>
   </body>
 </html>

@@ -25,23 +25,37 @@ body {
   max-width: 500px;
   margin: 0 auto 15px auto;
   padding: 10px 5px;
-  /* color: #f41de9; // can't decide on a color yet... */
+  color: #000;
   border: 3px solid #000;
   border-radius: 25px;
   text-decoration: none; /* removes line underneath link */
-  transition: all 222ms ease-in-out;
+  transition: all 222ms ease-in-out, transform .2s; /* can separate different transitions with comma. used transform to enlarge links when hovering. dunno if this is even working tho */
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.02); /* transform links to scale x1.02. I wanted it to be a subtle change */
+  } 
 
   &.carrd { /* pseudo-selector again or is it? Need to read up on this & thingy. Might be pseudo-element */
     background-color: #000;
     color: #fff;
-    border: 3px solid var(--red);
+    /* border: 3px solid var(--red); */
+
+    &:hover {
+      background-color: var(--red);
+      color: #fff;
+      border: 3px solid var(--red);
+    }
   }
 
+  /* editing hover colors */
   /* if you put this at the end instead of before the carrd pseudo-element(?), it applies to all elements of the class */
-  &:hover {
+  /* &:hover {
     background-color: var(--red);
     color: #fff;
-  }
+    transform: scale(1.02);
+  } */
 }
 
 /*
@@ -102,4 +116,52 @@ body {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #eee;
+}
+
+/* code from: redstapler.co how to add loading animation to website */
+
+/* background color and setting up positions for items in loader */
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #fff;
+  animation: loader 3s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader inner 3s infinite ease-in;
+}
+
+@keyframes loader {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(180deg); }
+  50% { transform: rotate(180deg); }
+  75% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes loader-inner {
+  0% { height: 0%; }
+  25% { height: 0%; }
+  50% { height: 100%; }
+  75% { height: 100%; }
+  100% { height: 0%; }
 }

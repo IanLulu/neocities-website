@@ -13,3 +13,9 @@ for (i = 0; i < coll.length; i++) {
         }
     });
 }
+
+/* for website loading animation (using jQuery) */
+// $(window).on("load", function() {
+//     $(".loader-wrapper").fadeOut("slow");
+// });
+/* it no worky. Will try directly writing the script on the html file */

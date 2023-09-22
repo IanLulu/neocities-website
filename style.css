@@ -49,6 +49,15 @@ body {
     }
   }
 
+  /* It dont work br 🙈 */
+  .vidya {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   /* editing hover colors */
   /* if you put this at the end instead of before the carrd pseudo-element(?), it applies to all elements of the class */
   /* &:hover {

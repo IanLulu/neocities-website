@@ -10,7 +10,8 @@
 body {
   background-color: white;
   color: black;
-  font-family: Verdana;
+  /* font-family: Verdana; */
+  font-family: 'Arimo', sans-serif;
   min-height: 100vh; /* vh = viewport height so displays it to max of viewport height */
   /* text-align: center; */
 }
@@ -18,6 +19,12 @@ body {
 .logo {
   width: 333px;
   padding: 9px;
+
+  &.socmed {
+    width: 33px;
+    height: 33px;
+    vertical-align: middle; /* aligns image with the text */
+  }
 }
 
 .social {
@@ -49,15 +56,6 @@ body {
     }
   }
 
-  /* It dont work br 🙈 */
-  .vidya {
-    position: absolute;
-    margin: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   /* editing hover colors */
   /* if you put this at the end instead of before the carrd pseudo-element(?), it applies to all elements of the class */
   /* &:hover {
@@ -65,6 +63,16 @@ body {
     color: #fff;
     transform: scale(1.02);
   } */
+}
+
+/* It dont work br 🙈 
+  10.04 edit/fix?: it was inside the .social class. FIXME IT WORK NOW BUT NO WORKY AT SAME TIME */
+.vidya {
+  /* position: absolute; */
+  margin: auto;
+  /* top: 50%; */
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
 }
 
 /*

@@ -12,6 +12,7 @@ body {
   color: black;
   /* font-family: Verdana; */
   font-family: 'Arimo', sans-serif;
+  font-display: swap;
   min-height: 100vh; /* vh = viewport height so displays it to max of viewport height */
   /* text-align: center; */
 }

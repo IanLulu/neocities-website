@@ -4,11 +4,21 @@
         <title>JavaScript Output Example</title>
     </head>
     <body>
-        <button onclick="anim1();">toggle animation</button>
         <pre id="d" style="background-color: #000; color: #ccc; font-size: 9pt;"></pre>
+        <button id="toggle" value="off" onclick="anim1(); changeButtonText();">toggle animation on</button>
         
-
         <script>
+            function changeButtonText() {
+                var element = document.getElementById("toggle");
+                if (element.value == "off") {
+                    element.value = "on";
+                    element.innerHTML = "toggle animation off";
+                } else {
+                    element.value = "off";
+                    element.innerHTML = "toggle animation on";
+                }
+            }
+
             /* 
             // source: https://github.com/EvanZhouDev/donut-js & chat-gpt prompt: "is there a way to show javascript output on an html website?"
 
@@ -23,6 +33,8 @@
             // Update the content of the output element
             outputElement.innerHTML = result;
             */
+            
+            /**                                             **/
 
             // source: https://www.a1k0n.net/2011/07/20/donut-math.html
             (function() {
